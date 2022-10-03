@@ -7,15 +7,14 @@ function Car() {
         alert("Марка авто: " + this.brand + ", год: " + this.year + ", цвет: " + this.color);
     }
 
-    this.getOwner = function () {
-        this.owner = prompt("Введите свое имя:");
-        alert("Владелец " + this.brand + " - " + this.owner);
+    this.setOwner = function (owner) {
+        this.owner = owner;
     }
 }
 
 let car = new Car()
 car.sayAboutCar();
-car.getOwner();
+car.setOwner({name: prompt('Введите имя:'), age: prompt('Введите возраст:')});
 
-
+console.log(car);
 
